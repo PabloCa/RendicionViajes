@@ -39,7 +39,7 @@
                     <li><a href="#"><i class="fa fa-gear fa-fw"></i> Ajustes</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="http://146.83.198.35/~icinf2/index.php/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    <li><a href="logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
                 </ul>
             </li>
