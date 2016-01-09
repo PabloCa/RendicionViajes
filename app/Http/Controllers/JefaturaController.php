@@ -37,19 +37,18 @@ class JefaturaController extends Controller {
         return Redirect::to(Auth::user()->type);
     }
 
-    public function estado(){
-        $solicitudes=\App\Comun::all();
-
-        if(Auth::user()->type == 'comun') {
-            return view ('comun.estado',compact('solicitudes') );
-        }else{
-            if(Auth::user()->type == 'administrador'){
-                return Redirect::to('admin');
-            }
+    public function versolicitudes()
+    {
+        if(Auth::user()->type == 'jefatura') {
+            return view('jefatura.versolicitudes');
         }
-
-
+        if(Auth::user()->type == 'administrador') {
+            Redirect::to('admin');
+        }
+        return Redirect::to(Auth::user()->type);
     }
+
+
 
     /**
      * Show the form for creating a new resource.

@@ -19,9 +19,17 @@ class CreateSolicitudesTable extends Migration {
             $table->enum('estado',['guardada','pendiente','aceptada','rechazada','en_curso','finalizada','validada']);
             $table->date('fecha_ini');
             $table->date('fecha_fin');
-            $table->integer('id_vinculacion');
+            $table->integer('id_vinculacion')->nullable();
             $table->string('motivo',150);
-		});
+            $table->string('nombre_viaje', 30);
+
+
+            $table->foreign('nombre_viaje')
+                ->references('nombre_viaje')->on('viajes')
+                ->onUpdate('CASCADE')
+                ->onDelete('CASCADE');
+        });
+
 	}
 
 	/**

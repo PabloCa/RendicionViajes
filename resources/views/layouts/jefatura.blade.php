@@ -49,10 +49,10 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="#"><i class="fa fa-users fa-fw"></i>Evaluar Solicitudes<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-users fa-fw"></i> Evaluar Solicitudes<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{!!URL::to('/evaluar')!!}"><i class='fa fa-plus fa-fw'></i>Ver solicitudes</a>
+                                <a href="{!!URL::to('/jefatura/versolicitudes')!!}"><i class='fa fa-list-ol fa-fw'></i></i> Ver solicitudes</a>
                             </li>
 
                 </ul>
