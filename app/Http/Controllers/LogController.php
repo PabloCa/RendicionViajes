@@ -49,6 +49,7 @@ class LogController extends Controller {
 				}
 				
 			}
+			if(Auth::user()->type == 'jefatura')return Redirect::to('jefatura');
 
 			/*if(strcmp(Auth::user()->type,'administrador')==0){
 				return Redirect::to('usuario');

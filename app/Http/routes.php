@@ -27,6 +27,8 @@ Route::resource('viaje', 'ViajeController');
 
 Route::resource('comun', 'ComunController');
 
+Route::resource('jefatura', 'JefaturaController');
+
 Route::get('admin','FrontController@admin');
 
 Route::resource('cargo', 'CargoController');
