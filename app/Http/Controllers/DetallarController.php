@@ -1,39 +1,25 @@
 <?php namespace App\Http\Controllers;
 
-use App\Comun;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Session;
+use App\Http\Requests\ViajeCreateRequest;
+use App\Http\Requests\ViajeUpdateRequest;
 use Illuminate\Http\Request;
-use App\Http\Requests\EvaluarCreateeRequest;
-use App\Http\Requests\EvaluarUpdateRequest;
-use Illuminate\Support\Facades\App;
-use Redirect;
-use Auth;
 
-class EvaluarController extends Controller {
+use Session;
+use Redirect;
+
+class DetallarController extends Controller {
 
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-
-
     public function index()
     {
-
-
-        if(Auth::user()->type == 'jefatura') {
-            return view('evaluar.index',compact('evaluar'));
-        }
-        if(Auth::user()->type == 'administrador') {
-            Redirect::to('admin');
-        }
-        return Redirect::to(Auth::user()->type);
+        return view('evaluar.detallar',compact('detallar'));
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -42,8 +28,6 @@ class EvaluarController extends Controller {
      */
     public function create()
     {
-
-
     }
 
     /**
@@ -51,7 +35,7 @@ class EvaluarController extends Controller {
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(ViajeCreateRequest $request)
     {
 
     }
@@ -75,8 +59,7 @@ class EvaluarController extends Controller {
      */
     public function edit($id)
     {
-        $solicitud = \App\Solicitud::find($id);
-        return view('evaluar.edit',['evaluar'=>$solicitud]);
+
     }
 
     /**
@@ -85,9 +68,9 @@ class EvaluarController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update(ViajeUpdateRequest $request, $id)
     {
-        //
+
     }
 
     /**
@@ -98,7 +81,7 @@ class EvaluarController extends Controller {
      */
     public function destroy($id)
     {
-        //
+
     }
 
 }
