@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f262a7e-860e-459c-a907-88c4e2f6e040" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_16_191237_create_gastos_table.php" />
-      <change type="DELETED" beforePath="C:\proyectos\RendicionViajes\database\migrations\2015_12_18_210659_create_viajes_cargos_table.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_12_19_073905_create_solicitudes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_12_19_073905_create_solicitudes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/solicitud/evaluar.blade.php" afterPath="$PROJECT_DIR$/resources/views/solicitud/evaluar.blade.php" />
+    <list default="true" id="6f262a7e-860e-459c-a907-88c4e2f6e040" name="Default" comment="algunas migraciones arregladas">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RX9000.iws" />
@@ -717,7 +713,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452969966413</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="algunas migraciones arregladas">
+      <created>1452972153279</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1452972153279</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -787,7 +789,8 @@
     <MESSAGE value="migracion nueva de solicitudes" />
     <MESSAGE value="migracion nueva de solicitudes arreglada y vista jefatura" />
     <MESSAGE value="rutas con evaluar solicitud" />
-    <option name="LAST_COMMIT_MESSAGE" value="rutas con evaluar solicitud" />
+    <MESSAGE value="algunas migraciones arregladas" />
+    <option name="LAST_COMMIT_MESSAGE" value="algunas migraciones arregladas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
