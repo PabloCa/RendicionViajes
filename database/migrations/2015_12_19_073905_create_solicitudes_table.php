@@ -22,13 +22,21 @@ class CreateSolicitudesTable extends Migration {
             $table->integer('id_vinculacion')->nullable();
             $table->string('motivo',150);
             $table->string('nombre_viaje', 30);
-
+			$table->string('email')->unique();
 
             $table->foreign('nombre_viaje')
                 ->references('nombre_viaje')->on('viajes')
                 ->onUpdate('CASCADE')
                 ->onDelete('CASCADE');
+
+			$table->foreign('email')
+				->references('email')->on('users')
+				->onUpdate('CASCADE')
+				->onDelete('CASCADE');
+
+
         });
+
 
 	}
 

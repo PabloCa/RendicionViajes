@@ -11,7 +11,11 @@
 
     <table class="table">
         <thead>
-        <th>Solicitudes</th>
+        <th>Solicitante</th>
+        <th>Motivo</th>
+        <th>Destino</th>
+        <th>Fecha ida</th>
+        <th>Fecha regreso</th>
 
         </thead>
         <?php   $solicitudes = DB::table('solicitudes')->get();

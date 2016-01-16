@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateViajesCargosTable extends Migration {
+class CreateGastosTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,20 +12,11 @@ class CreateViajesCargosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('viajes_cargos', function(Blueprint $table)
+		Schema::create('gastos', function(Blueprint $table)
 		{
-			$table->string('nombre_cargo', 30);
+			$table->increments('id');
 			$table->string('nombre_viaje', 30);
-
-			$table->timestamps();
-
-
-			$table->primary(array('nombre_cargo', 'nombre_viaje'));
-
-			$table->foreign('nombre_cargo')
-				->references('nombre_cargo')->on('cargos')
-				->onUpdate('CASCADE')
-				->onDelete('CASCADE');
+			$table->string('nombre_gasto', 30);
 
 			$table->foreign('nombre_viaje')
 				->references('nombre_viaje')->on('viajes')
@@ -41,7 +32,7 @@ class CreateViajesCargosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('viajes_cargos');
+		Schema::drop('gastos');
 	}
 
 }
