@@ -27,12 +27,14 @@ Route::resource('viaje', 'ViajeController');
 
 Route::resource('comun', 'ComunController');
 
-Route::get('jefatura/{atributo?}',function($atributo=""){
+Route::resource('evaluar', 'EvaluarController');
+
+/*Route::get('jefatura/{atributo?}',function($atributo=""){
 	if($atributo=="")return view("layouts.jefatura");
 	else{
 		return view("jefatura".".".$atributo);
 	}
-});
+});*/
 
 Route::resource('jefatura', 'JefaturaController');
 

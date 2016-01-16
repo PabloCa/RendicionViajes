@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\App;
 use Redirect;
 use Auth;
 
-class JefaturaController extends Controller {
+class EvaluarController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -20,8 +20,10 @@ class JefaturaController extends Controller {
 
     public function index()
     {
+
+
         if(Auth::user()->type == 'jefatura') {
-            return view('layouts.jefatura',compact('jefatura'));
+            return view('solicitud.evaluar',compact('evaluar'));
         }
         if(Auth::user()->type == 'administrador') {
             Redirect::to('admin');
