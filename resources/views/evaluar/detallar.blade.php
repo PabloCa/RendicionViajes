@@ -18,6 +18,15 @@ asdasdasdsaddsa
 
     $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     echo $actual_link;
+    echo"--------";
+    $porciones = explode("/", $actual_link);
+    $resultado = count($porciones);
+    echo $porciones[$resultado-1];
+    $asd = DB::table('solicitudes')->where('id',$porciones[$resultado-1])->first();
+    echo $asd->motivo;
+
+
 
     ?>
+
 @endsection
