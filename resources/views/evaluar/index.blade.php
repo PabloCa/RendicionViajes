@@ -18,7 +18,7 @@
 
 
     </thead>
-    <?php   $solicitudes = DB::table('solicitudes')->get();
+    <?php   $solicitudes = DB::table('solicitudes')->where('estado','pendiente')->get();
     ?>
     @foreach($solicitudes as $solicitud)
 

@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration {
 			$table->string('type', 20);
 			$table->string('state', 20);
 			$table->string('department', 60);
+			$table->string('charge', 60);
 			$table->rememberToken();
 			$table->timestamps();
 		});

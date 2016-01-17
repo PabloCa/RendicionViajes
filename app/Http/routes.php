@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+use Illuminate\Support\Facades\Mail;
 
 
 Route::get('/','FrontController@index');
@@ -62,3 +62,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+get('/email', function(){
+	Mail::send('emails.test',['name'=>'Novica'],function($message){
+		$message->to('diarreasangrienta@gmail.com','someguy')->subject('Welcome');
+	});
+});
+

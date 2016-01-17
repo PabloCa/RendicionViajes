@@ -28,8 +28,9 @@ return [
 	|
 	*/
 
-	'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+	//'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
+	'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 	/*
 	|--------------------------------------------------------------------------
 	| SMTP Host Port
@@ -54,7 +55,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => 'rendicionviajes@gmail.com', 'name' => 'SistemaRendicionViajes'],
 
 	/*
 	|--------------------------------------------------------------------------

@@ -16,6 +16,7 @@ class CreateViajesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nombre_viaje', 30)->unique();
+			$table->integer('monto_max');
 			$table->timestamps();
 		});
 	}
