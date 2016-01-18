@@ -28,9 +28,6 @@ Route::get('logout','LogController@logout');
 
 Route::resource('viaje', 'ViajeController');
 
-Route::get('detallar/{variable?}', function($variable=""){
-	return view('evaluar.detallar',compact('detallar'));
-});
 
 Route::get('detallar/{atributo?}',function($atributo=""){
 	if($atributo=="")return view('evaluar.detallar',compact('detallar'));

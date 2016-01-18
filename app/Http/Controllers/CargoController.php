@@ -88,9 +88,7 @@ class CargoController extends Controller {
             'id' => $id,
 
         ]);
-        //$cargo = \App\Cargo::find($id);
-        //$cargo->fill($request->all());
-        //$cargo->save();
+
         Session::flash('message','Solicitud Rechazada');
         return Redirect::to('/evaluar');
     }

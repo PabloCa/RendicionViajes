@@ -14,4 +14,13 @@ class ExampleTest extends TestCase {
 		$this->assertEquals(200, $response->getStatusCode());
 	}
 
+
+	public function testJefatura()
+	{
+		$user = \App\User::where('email', '=', 'jef@jef.jef')->first();
+		$this->be($user);
+		$this->call('GET', 'jefatura');
+		$this->assertResponseOk();
+	}
+
 }

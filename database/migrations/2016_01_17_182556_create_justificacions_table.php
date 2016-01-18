@@ -16,7 +16,7 @@ class CreateJustificacionsTable extends Migration {
 		{
 			$table->increments('id_justificacion');
 			$table->string('justificacion', 100);
-			$table->integer('id')->unsigned();
+			$table->integer('id')->unsigned()->unique();
 			$table->timestamps();
 
 			$table->foreign('id')
