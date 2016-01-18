@@ -5,20 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f262a7e-860e-459c-a907-88c4e2f6e040" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_01_17_182556_create_justificacions_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Justificacion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/evaluar/correo.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/cargo/escribircorreo.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/evaluar/justificar.blade.php" />
-      <change type="DELETED" beforePath="C:\proyectos\RendicionViajes\resources\views\evaluar\edit.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_12_19_073905_create_solicitudes_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_12_19_073905_create_solicitudes_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CargoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CargoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EvaluarController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EvaluarController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/evaluar/detallar.blade.php" afterPath="$PROJECT_DIR$/resources/views/evaluar/detallar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cargo/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/cargo/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/cargo/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/cargo/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/emails/test.blade.php" afterPath="$PROJECT_DIR$/resources/views/emails/test.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RX9000.iws" />
@@ -97,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7238267">
+            <state vertical-scroll-proportion="-7.5660377">
               <caret line="107" column="36" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
               <folding>
                 <element signature="e#393#429#0#PHP" expanded="true" />
@@ -121,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015_12_19_073905_create_solicitudes_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2015_12_19_073905_create_solicitudes_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_19_073905_create_solicitudes_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
+            <state vertical-scroll-proportion="0.7314974">
               <caret line="32" column="34" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="34" />
               <folding />
             </state>
@@ -961,7 +947,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453005919574</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="mi cdeu listo">
+      <created>1453078426539</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1453078426539</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -971,6 +963,7 @@
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27232796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -980,7 +973,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1037,7 +1029,8 @@
     <MESSAGE value="Detalles" />
     <MESSAGE value="Migraciones (mas) arregladas y dealle de sol" />
     <MESSAGE value="Migraciones (mas) arregladas y dealle de evaluar sol" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migraciones (mas) arregladas y dealle de evaluar sol" />
+    <MESSAGE value="mi cdeu listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="mi cdeu listo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1391,14 +1384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_19_073905_create_solicitudes_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/evaluar/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64888126">
@@ -1451,11 +1436,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7238267">
+        <state vertical-scroll-proportion="-7.5660377">
           <caret line="107" column="36" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
           <folding>
             <element signature="e#393#429#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_12_19_073905_create_solicitudes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7314974">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
