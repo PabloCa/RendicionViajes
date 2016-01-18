@@ -16,6 +16,10 @@
         {!!Form::label('viaje','Viaje:')!!}
         {!!Form::text('nombre_viaje',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre del viaje'])!!}
     </div>
+    <div class="form-group">
+        {!!Form::label('viaje','Monto maximo:')!!}
+        {!!Form::text('monto_max',null,['class'=>'form-control','placeholder'=>'Ingresa el monto maximo del viaje'])!!}
+    </div>
 
     {!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
     {!!Form::close()!!}

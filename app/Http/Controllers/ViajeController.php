@@ -16,6 +16,9 @@ class ViajeController extends Controller {
 	 *
 	 * @return Response
 	 */
+	public function __construct(){
+		$this->middleware('auth', ['only' => ['index', 'edit', 'store', 'create','update','destroy']]);
+	}
 	public function index()
 	{
 		$viajes = \App\Viaje::all();
@@ -42,6 +45,7 @@ class ViajeController extends Controller {
 		\App\Viaje::create([
 
 				'nombre_viaje' => $request['nombre_viaje'],
+				'monto_max' => $request['monto_max']
 
 		]);
 		return redirect('/viaje')->with('message','Viaje registrado correctamente');

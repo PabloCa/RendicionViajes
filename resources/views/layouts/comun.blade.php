@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Comun</a>
+            <a class="navbar-brand" href="index.html">SGV</a>
         </div>
 
 
@@ -55,7 +55,7 @@
                                 <a href="{!!URL::to('/solicitud_create')!!}"><i class="fa fa-paper-plane-o fa-fw"></i> Realizar Solicitud</a>
                             </li>
                             <li>
-                                <a href="{!!URL::to('/estado')!!}"><i class="fa fa-check fa-fw"></i></i> Estado</a>
+                                <a href="{!!URL::to('/misolicitudes')!!}"><i class="fa fa-list-ol fa-fw"></i></i> Mis solicitudes</a>
                             </li>
                         </ul>
                     </li>

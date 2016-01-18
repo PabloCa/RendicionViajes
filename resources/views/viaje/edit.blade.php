@@ -18,6 +18,10 @@
         {!!Form::label('viaje','Viaje:')!!}
         {!!Form::text('nombre_viaje',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre del viaje'])!!}
     </div>
+    <div class="form-group">
+        {!!Form::label('viaje','Monto maximo:')!!}
+             {!!Form::text('monto_max',null,['class'=>'form-control','placeholder'=>'Ingresa el monto maximo'])!!}
+    </div>
     <div class="btn-toolbar">
         <div class="btn-group">
             {!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
