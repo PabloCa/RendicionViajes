@@ -11,11 +11,27 @@
             </ul>
         </div>
     @endif
+    <?php
+    $justificacion=null;
+    ?>
 
+    {!!Form::model($justificacion,['route'=>['evaluar.update',$justificacion],'method'=>'PUT'])!!}
 
+    <div class="form-group">
+        {!!Form::label('justificacion','Justificacion:')!!}
+        {!!Form::text('justificacion',null,['class'=>'form-control','placeholder'=>'Ingresa '])!!}
+    </div>
+    <div class="btn-toolbar">
+        <div class="btn-group">
+            {!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
+            {!!Form::close()!!}
+        </div>
+
+        {!!Form::close()!!}
+    </div>
     <?php
 
-
+    $number = Input::get('number');
     $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
     $porciones = explode("/", $actual_link);
@@ -48,13 +64,5 @@
     }
     echo "</h4>";
     ?>
-
-    <?php echo "<a href = '../aceptarsol/{$porciones[$resultado-1]}'>Aceptar</a>"?><br>
-    <?php echo "<a href = '../cargo/{$porciones[$resultado-1]}/edit'>Rechazar</a>"?><br>
-    <?php $correo=Auth::user()->name; ?>
-    <?php echo "<a href = '../email/{$porciones[$resultado-1]}/{$correo}'>Enviar correo</a>"?><br>
-
-
-
 
 @endsection

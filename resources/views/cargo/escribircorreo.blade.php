@@ -12,18 +12,22 @@
         </div>
     @endif
 
-    {!!Form::model($solicitud,['route'=>['evaluar.update',$solicitud],'method'=>'PUT'])!!}
+    {!!Form::model($cargo,['route'=>['cargo/destroy',$cargo],'method'=>'PUT'])!!}
 
     <div class="form-group">
-        {!!Form::label('solicitud','Solicitud:')!!}
-        {!!Form::text('nombre_viaje',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre del viaje'])!!}
+        {!!Form::label('mensaje','Mensaje:')!!}
+        {!!Form::text('nombre_cargo',null,['class'=>'form-control','placeholder'=>'Ingresa el cuerpo del mensaje'])!!}
     </div>
     <div class="btn-toolbar">
         <div class="btn-group">
-            {!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
+            {!!Form::submit('Enviar',['class'=>'btn btn-danger'])!!}
             {!!Form::close()!!}
         </div>
-
         {!!Form::close()!!}
     </div>
+
+
+
+
+
 @endsection

@@ -23,6 +23,7 @@ class CreateSolicitudesTable extends Migration {
             $table->string('motivo',150);
             $table->string('nombre_viaje', 30);
 			$table->string('email');
+			$table->timestamps();
 
             $table->foreign('nombre_viaje')
                 ->references('nombre_viaje')->on('viajes')

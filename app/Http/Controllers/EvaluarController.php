@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use App\Comun;
+use App\Justificacion;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Session;
@@ -10,6 +10,8 @@ use App\Http\Requests\EvaluarUpdateRequest;
 use Illuminate\Support\Facades\App;
 use Redirect;
 use Auth;
+
+
 
 class EvaluarController extends Controller {
 
@@ -87,8 +89,11 @@ class EvaluarController extends Controller {
      */
     public function update($id)
     {
-        //
+        echo $id;
+        echo "hola";
     }
+
+
 
     /**
      * Remove the specified resource from storage.

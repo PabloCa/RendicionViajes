@@ -1,1 +1,1 @@
-hola {{ $name  }}
+Hola {{ $name  }}, su jefatura desea comunicarse con usted con el fin de aclarar algunos asuntos de su solicitud, puedes enviarle un correo a {{ $correo  }}

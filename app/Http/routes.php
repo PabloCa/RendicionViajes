@@ -12,6 +12,9 @@
 */
 use Illuminate\Support\Facades\Mail;
 
+use Illuminate\Database\Eloquent\Model;
+use App\Justificacion;
+
 
 Route::get('/','FrontController@index');
 
@@ -33,6 +36,31 @@ Route::get('detallar/{atributo?}',function($atributo=""){
 	if($atributo=="")return view('evaluar.detallar',compact('detallar'));
 	else{
 		return view('evaluar.detallar',compact('detallar'));
+	}
+});
+
+Route::get('justificar/{atributo?}',function($atributo=""){
+	if($atributo=="")return view('evaluar.justificar',compact('justificar'));
+	else{
+		return view('evaluar.justificar',compact('justificar'));
+	}
+});
+
+Route::get('correo/{atributo?}',function($atributo=""){
+	if($atributo=="")return view('evaluar.correo',compact('correo'));
+	else{
+		return view('evaluar.correo',compact('correo'));
+	}
+});
+
+Route::get('aceptarsol/{atributo?}',function($atributo=""){
+	if($atributo=="") return Redirect::to('/evaluar');
+	else{
+		$sol = \App\Solicitud::find($atributo);
+		$sol->estado='aceptada';
+		$sol->save();
+		Session::flash('message','Solicitud Aceptada');
+		return Redirect::to('/evaluar');
 	}
 });
 
@@ -58,15 +86,25 @@ Route::resource('comun','ComunController');
 Route::resource('estado','ComunController@estado');
 Route::resource('solicitud_create','ComunController@create');
 
+
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
 
 
-get('/email', function(){
-	Mail::send('emails.test',['name'=>'Novica'],function($message){
-		$message->to('diarreasangrienta@gmail.com','someguy')->subject('Welcome');
+get('/email/{atributo1}/{atributo2}', function($atributo1, $atributo2){
+	$sol = DB::table('solicitudes')->where('id',$atributo1)->first();
+	$usuario=DB::table('users')->where('email',$sol->email)->first();
+
+	Mail::send('emails.test',['name'=>$usuario->name   , 'correo'=>$atributo2 ],function($message)use($sol){
+
+		$destino=$sol->email;
+		$message->to($destino,'someguy')->subject('Sistema rendicion de viajes');
 	});
+	Session::flash('message','Mensaje enviado');
+	return Redirect::to('/evaluar');
 });
 

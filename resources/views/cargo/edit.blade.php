@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.jefatura')
 @section('content')
 
     @if(count($errors)>0)
@@ -15,18 +15,53 @@
     {!!Form::model($cargo,['route'=>['cargo.update',$cargo],'method'=>'PUT'])!!}
 
     <div class="form-group">
-        {!!Form::label('cargo','Cargo:')!!}
+        {!!Form::label('justificacion','Justificacion:')!!}
         {!!Form::text('nombre_cargo',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre del cargo'])!!}
     </div>
     <div class="btn-toolbar">
         <div class="btn-group">
-            {!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
+            {!!Form::submit('Rechazar',['class'=>'btn btn-danger'])!!}
             {!!Form::close()!!}
-        </div>
-        <div class="btn-group">
-            {!!Form::open(['route'=>['cargo.destroy', $cargo], 'method' => 'DELETE'])!!}
-            {!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
         </div>
         {!!Form::close()!!}
     </div>
+
+
+
+
+    <?php
+
+    $number = Input::get('number');
+    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+    $porciones = explode("/", $actual_link);
+    $resultado = count($porciones);
+
+    $asd = DB::table('solicitudes')->where('id',$porciones[$resultado-2])->first();
+    echo "<h2>Detalles de la solicitud</h2> ";
+    echo "<br><h4>Motivo del viaje: ".$asd->motivo."</h4>";
+    echo "<br><h4>Fecha de envio de solicitud: ".$asd->fecha_sol."</h4>";
+    echo "<br><h4>Fecha de inicio del viaje: ".$asd->fecha_ini."</h4>";
+    echo "<br><h4>Fecha de regreso del viaje: ".$asd->fecha_fin."</h4>";
+
+    $usuario=DB::table('users')->where('email',$asd->email)->first();
+    echo "<br><h2>Detalles del usuario</h2> ";
+    echo "<br><h4>Nombre: ".$usuario->name."</h4>";
+    echo "<br><h4>Cargo: ".$usuario->charge."</h4>";
+    echo "<br><h4>Correo: ".$usuario->email."</h4>";
+    echo "<br><h4>Departamento: ".$usuario->department."</h4>";
+    echo "<br><h4>Estado: ".$usuario->state."</h4>";
+
+    $viaje=DB::table('viajes')->where('nombre_viaje',$asd->nombre_viaje)->first();
+    echo "<br><h2>Detalles del viaje</h2> ";
+    echo "<br><h4>Tipo de viaje: ".$asd->nombre_viaje."</h4>";
+    echo "<br><h4>Monto Maximo: ".$viaje->monto_max."</h4>";
+
+    $gastos = DB::table('gastos')->where('nombre_viaje',$asd->nombre_viaje)->get();
+    echo "<br><h4>Puede gastar en: ";
+    foreach($gastos as $gasto){
+        echo $gasto->nombre_gasto.", ";
+    }
+    echo "</h4>";
+    ?>
 @endsection

@@ -55,7 +55,8 @@ class CargoController extends Controller {
      */
     public function show($id)
     {
-        //
+        $cargo = \App\Cargo::find($id);
+        return view('cargo.escribircorreo',['cargo'=>$cargo]);
     }
 
     /**
@@ -78,11 +79,20 @@ class CargoController extends Controller {
      */
     public function update(CargoUpdateRequest $request, $id)
     {
-        $cargo = \App\Cargo::find($id);
-        $cargo->fill($request->all());
-        $cargo->save();
-        Session::flash('message','Cargo Actualizado Correctamente');
-        return Redirect::to('/cargo');
+        $sol = \App\Solicitud::find($id);
+        $sol->estado='rechazada';
+        $sol->save();
+        \App\Justificacion::create([
+
+            'justificacion' => $request['nombre_cargo'],
+            'id' => $id,
+
+        ]);
+        //$cargo = \App\Cargo::find($id);
+        //$cargo->fill($request->all());
+        //$cargo->save();
+        Session::flash('message','Solicitud Rechazada');
+        return Redirect::to('/evaluar');
     }
 
     /**
@@ -93,9 +103,12 @@ class CargoController extends Controller {
      */
     public function destroy($id)
     {
-        \App\Cargo::destroy($id);
-        Session::flash('message','Cargo Eliminado Correctamente');
-        return Redirect::to('/cargo');
+        echo "asdf";/*
+        $sol = \App\Solicitud::find($id);
+        $sol->estado='aceptada';
+        $sol->save();
+        Session::flash('message','Solicitud Aceptada');
+        return Redirect::to('/evaluar');*/
     }
 
 }
