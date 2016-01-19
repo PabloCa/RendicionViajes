@@ -22,7 +22,8 @@ class ViajeCreateRequest extends Request {
 	public function rules()
 	{
 		return [
-			'nombre_viaje'=>'required',
+			'nombre_viaje'=>'required|unique:viajes,nombre_viaje',
+			'monto_max'=>'required|numeric|min:1',
 		];
 	}
 

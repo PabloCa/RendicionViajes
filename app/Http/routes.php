@@ -80,8 +80,11 @@ Route::resource('cargo', 'CargoController');
 
 Route::resource('viajecargo', 'ViajeCargoController');
 Route::resource('comun','ComunController');
+
+
 Route::resource('estado','ComunController@estado');
 Route::resource('solicitud_create','ComunController@create');
+Route::resource('misolicitudes','ComunController@misolicitudes');
 
 
 

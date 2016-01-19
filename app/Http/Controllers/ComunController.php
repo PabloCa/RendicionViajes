@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Redirect;
 use Auth;
-
+use DB;
 class ComunController extends Controller {
 
 	/**
@@ -18,7 +18,7 @@ class ComunController extends Controller {
 	 */
 	 
 	public function __construct(){
-			$this->middleware('auth', ['only' => ['index', 'estado', 'store', 'create']]);	
+			$this->middleware('auth', ['only' => ['index', 'misolicitudes', 'store', 'create']]);
 	}
 
 	public function comun(){
@@ -40,16 +40,36 @@ class ComunController extends Controller {
 
 	public function estado(){
 		$solicitudes=\App\Comun::all();
-		
+
 		if(Auth::user()->type == 'comun') {
-			return view ('comun.estado',compact('solicitudes') );	
+			return view ('comun.estado',compact('solicitudes') );
 		}else{
 			if(Auth::user()->type == 'administrador'){
 				return Redirect::to('admin');
 			}
 		}
-		
-		
+
+
+	}
+
+	public function misolicitudes()
+	{
+
+		if(Auth::user()->type == 'comun') {
+
+        $solicitudes = DB::table('solicitudes')
+			->orderBy('solicitudes.id', 'desc')
+			->join('users',function($join){
+				$join->on('users.email', '=', 'solicitudes.email')
+					->where('users.id','=',Auth::user()->id);
+			})
+			->get();
+			return view('comun.misolicitudes',compact('solicitudes'));
+		}
+		if(Auth::user()->type == 'administrador') {
+			Redirect::to('admin');
+		}
+		return Redirect::to(Auth::user()->type);
 	}
 
 	/**
@@ -103,6 +123,9 @@ class ComunController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
+
+
+
 	public function show($id)
 	{
 		//

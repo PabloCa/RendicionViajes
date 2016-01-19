@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.comun')
 
 @if(Session::has('message'))
     <div class="alert alert-success alert-dismissible" role="alert">
@@ -11,16 +11,22 @@
 
     <table class="table">
         <thead>
-        <th>Viaje</th>
-        <th>Monto maximo</th>
+        <th>Nombre viaje</th>
+        <th>Motivo</th>
+        <th>Fecha inicio</th>
+        <th>Fecha fin</th>
+        <th>Estado</th>
+
         </thead>
-        @foreach($viajes as $viaje)
+
+        @foreach($solicitudes as $solicitud)
             <tbody>
-            <td>{{$viaje->nombre_viaje}}</td>
-            <td>{{$viaje->monto_max}}</td>
-            <td>
-                {!!link_to_route('viaje.edit', $title = 'Editar', $parameters = $viaje, $attributes = ['class'=>'btn btn-primary'])!!}
-            </td>
+            <td>{{$solicitud->nombre_viaje}}</td>
+            <td>{{$solicitud->motivo}}</td>
+            <td>{{$solicitud->fecha_ini}}</td>
+            <td>{{$solicitud->fecha_fin}}</td>
+            <td>{{$solicitud->estado}}</td>
+
             </tbody>
         @endforeach
     </table>

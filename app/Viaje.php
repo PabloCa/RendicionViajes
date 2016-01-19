@@ -11,6 +11,6 @@ class Viaje extends Model implements AuthenticatableContract{
 
     protected $table = 'viajes';
 
-    protected $fillable = ['nombre_viaje'];
+    protected $fillable = ['nombre_viaje','monto_max'];
 
 }
